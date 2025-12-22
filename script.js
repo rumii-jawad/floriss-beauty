@@ -1,11 +1,11 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navlink');
+const hamburger = document.querySelector(".humburger");
+const navlink = document.querySelector(".navlink");
 
-if(menuIcon) {
-    menuIcon.onclick = () => {
-        navbar.classList.toggle('active');
-    };
-}
+hamburger.addEventListener("click", () => {
+    navlink.classList.toggle("active");
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Home Page Link
     document.getElementById("homeLink").onclick = function(e) {

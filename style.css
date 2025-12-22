@@ -597,88 +597,74 @@ form h3{
 
 
 
-
-/* Mobile View Fixes (Max width 768px) */
+/* --- Mobile View Adjustments (For screens smaller than 768px) --- */
 @media (max-width: 768px) {
-    /* Header aur Navbar ko adjust karna */
+    
+    /* 1. Header & Navbar */
     .navbar {
-        padding: 15px 20px;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        padding: 10px 5%;
+        position: relative;
     }
 
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    /* Menu ko mobile par hide karna aur click par dikhana */
+    /* Menu ko mobile par chhupana */
     .navlink {
-        display: none; /* Default mein chhupa rahega */
+        display: none; /* Default band rahega */
         flex-direction: column;
-        width: 100%;
-        background-color: #fff;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
-        text-align: center;
-        padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         z-index: 1000;
+        text-align: center;
     }
 
-    /* Jab hamburger click ho to menu dikhe */
+    /* Jab JS se 'active' class add hogi tab menu dikhega */
     .navlink.active {
         display: flex;
     }
 
     .navlink li {
-        margin: 15px 0;
+        margin: 10px 0;
     }
 
-    /* Hamburger icon ko sahi se dikhana */
-    #menu-icon {
+    /* Hamburger icon ko visible karna */
+    .humburger {
         display: block !important;
         font-size: 24px;
-        cursor: pointer;
         color: #333;
     }
 
-    /* Icons ki spacing */
-    .nav-icon {
-        gap: 15px;
+    /* 2. Hero Section */
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    /* Product Cards ko mobile par 1 column mein karna */
-    .card-skincare-container {
-        display: flex;
+    /* 3. Category & Product Cards (Wrapping Fix) */
+    .category-container, 
+    .card-container {
+        justify-content: center !important;
+        gap: 20px !important;
+    }
+
+    .card, .category {
+        width: 90% !important; /* Mobile par card poori jagah lega */
+        max-width: 350px;
+    }
+
+    /* 4. Footer Fix */
+    .footer-container {
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 10px;
-    }
-
-    .skincare-card {
-        width: 90% !important; /* Mobile par card bada dikhega */
-        margin: 0 auto;
-    }
-
-    .skincare-card img {
-        height: auto; /* Image responsive rahegi */
-        width: 100%;
-    }
-
-    /* Hero Section / Banner fix */
-    .hero-section {
-        height: auto;
-        padding: 40px 20px;
         text-align: center;
+        gap: 30px;
     }
 }
 
-/* Desktop par Hamburger chhupane ke liye */
+/* Desktop par hamburger chhupane ke liye */
 @media (min-width: 769px) {
-    #menu-icon {
+    .humburger {
         display: none;
     }
 }
