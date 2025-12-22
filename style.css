@@ -597,74 +597,54 @@ form h3{
 
 
 
-/* --- Mobile View Adjustments (For screens smaller than 768px) --- */
 @media (max-width: 768px) {
-    
-    /* 1. Header & Navbar */
-    .navbar {
-        padding: 10px 5%;
-        position: relative;
-    }
-
-    /* Menu ko mobile par chhupana */
-    .navlink {
-        display: none; /* Default band rahega */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
+    /* Poori body ka horizontal scroll khatam karne ke liye */
+    html, body {
+        overflow-x: hidden;
         width: 100%;
-        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 1. Hero Section Fix */
+    .hero {
+        height: auto !important; /* Fixed height khatam karein */
+        padding: 50px 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Text aur image ko upar niche karein */
+        text-align: center;
         padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-        text-align: center;
     }
 
-    /* Jab JS se 'active' class add hogi tab menu dikhega */
-    .navlink.active {
-        display: flex;
-    }
-
-    .navlink li {
-        margin: 10px 0;
-    }
-
-    /* Hamburger icon ko visible karna */
-    .humburger {
-        display: block !important;
-        font-size: 24px;
-        color: #333;
-    }
-
-    /* 2. Hero Section */
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem !important; /* Heading choti karein */
+        line-height: 1.2;
     }
 
-    /* 3. Category & Product Cards (Wrapping Fix) */
-    .category-container, 
-    .card-container {
-        justify-content: center !important;
-        gap: 20px !important;
+    .hero-content h3, .hero-content h4 {
+        font-size: 1.2rem !important;
     }
 
-    .card, .category {
-        width: 90% !important; /* Mobile par card poori jagah lega */
-        max-width: 350px;
+    /* 2. Images Fix (Jo screen se bahar ja rahi hain) */
+    img {
+        max-width: 100%; /* Image kabhi screen se bari nahi hogi */
+        height: auto;
     }
 
-    /* 4. Footer Fix */
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
+    /* 3. Container Padding */
+    .container {
+        width: 95% !important;
+        padding: 0 15px;
+        margin: 0 auto;
     }
-}
 
-/* Desktop par hamburger chhupane ke liye */
-@media (min-width: 769px) {
-    .humburger {
-        display: none;
+    /* 4. Navbar Fix */
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 20px;
     }
 }
