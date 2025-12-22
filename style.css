@@ -597,54 +597,95 @@ form h3{
 
 
 
-@media (max-width: 768px) {
-    /* Poori body ka horizontal scroll khatam karne ke liye */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
 
-    /* 1. Hero Section Fix */
-    .hero {
-        height: auto !important; /* Fixed height khatam karein */
-        padding: 50px 0;
-        background-size: cover;
+@media  screen and (max-width:700px){
+    .navlink{
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-start;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background-color: var(--text-clr);
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: transform .3s ease-in-out;
+    }
+    .navlink-active{
+        transform: translateY(20%);
+    }
+    .navlink .link{
+        font-weight: 400;
+    }
+    .navlink a{
+        color: var(--secondary-clr);
+    }
+    .humburger{
+        display: block;
+    }
+    .container{
+        max-width: 95%;
+    }
+    .hero{
+        height: 60vh;
+    }
+    h3{
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    }
+    h1{
+        font-size: 2.2rem;
+        line-height: 4rem;
+    }
+    h4{
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+    .category-container{
+    grid-template-columns: 1fr;
+    }
+    .category:nth-child(1),
+    .category:nth-child(2),
+    .category:nth-child(3),
+    .category:nth-child(4){
+        grid-row: auto;
+        max-width: 80vw;
+    }
+    .sale-container {
+        padding-inline: 20px;
+        text-align: center; /* Sab kuch center karne ke liye */
         background-position: center;
     }
 
-    .hero-content {
-        flex-direction: column; /* Text aur image ko upar niche karein */
+    .sale-container h3, 
+    .sale-container h1 {
+        padding-left: 0 !important; /* Fixed padding khatam */
         text-align: center;
-        padding: 20px;
+        line-height: 1.3;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem !important; /* Heading choti karein */
-        line-height: 1.2;
+    .sale-container h1 {
+        font-size: 1.8rem;
     }
 
-    .hero-content h3, .hero-content h4 {
-        font-size: 1.2rem !important;
+    .sale-container .line {
+        width: 80px;
+        margin: 15px auto !important; /* Line ko center karega */
     }
 
-    /* 2. Images Fix (Jo screen se bahar ja rahi hain) */
-    img {
-        max-width: 100%; /* Image kabhi screen se bari nahi hogi */
-        height: auto;
+    /* "Big Sale" text ko center karne ke liye */
+    .sale-container h4 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 3. Container Padding */
-    .container {
-        width: 95% !important;
-        padding: 0 15px;
-        margin: 0 auto;
-    }
-
-    /* 4. Navbar Fix */
-    .navbar {
-        justify-content: space-between;
-        padding: 10px 20px;
+    /* Button ko center karne ke liye */
+    .sale-container .btn, 
+    .sale-container button {
+        display: block;
+        margin: 20px auto !important;
     }
 }
+
+

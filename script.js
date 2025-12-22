@@ -1,10 +1,13 @@
-const hamburger = document.querySelector(".humburger");
-const navlink = document.querySelector(".navlink");
+const list = document.querySelector(".navlink");
+const humburger = document.querySelector(".fa-bars");
 
-hamburger.addEventListener("click", () => {
-    navlink.classList.toggle("active");
+humburger.addEventListener("click", () => {
+    // This swaps the icon
+    humburger.classList.toggle("fa-x"); 
+    
+    // THIS IS THE MISSING PART: This shows/hides the menu
+    list.classList.toggle("navlink-active"); 
 });
-
 
 document.addEventListener("DOMContentLoaded", function() {
     // Home Page Link
