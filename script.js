@@ -1,14 +1,11 @@
-const list = document.querySelector(".navlink");
-const humburger = document.querySelector(".fa-bars");
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navlink');
 
-humburger.addEventListener("click", () => {
-    // This swaps the icon
-    humburger.classList.toggle("fa-x"); 
-    
-    // THIS IS THE MISSING PART: This shows/hides the menu
-    list.classList.toggle("navlink-active"); 
-});
-
+if(menuIcon) {
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+    };
+}
 document.addEventListener("DOMContentLoaded", function() {
     // Home Page Link
     document.getElementById("homeLink").onclick = function(e) {

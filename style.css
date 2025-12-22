@@ -598,94 +598,87 @@ form h3{
 
 
 
-@media  screen and (max-width:700px){
-    .navlink{
+/* Mobile View Fixes (Max width 768px) */
+@media (max-width: 768px) {
+    /* Header aur Navbar ko adjust karna */
+    .navbar {
+        padding: 15px 20px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Menu ko mobile par hide karna aur click par dikhana */
+    .navlink {
+        display: none; /* Default mein chhupa rahega */
         flex-direction: column;
-        position: absolute;
-        align-items: flex-start;
-        top: 0px;
-        left: 0;
         width: 100%;
-        background-color: var(--text-clr);
-        padding: 2rem;
-        transform: translateY(-100%);
-        transition: transform .3s ease-in-out;
-    }
-    .navlink-active{
-        transform: translateY(20%);
-    }
-    .navlink .link{
-        font-weight: 400;
-    }
-    .navlink a{
-        color: var(--secondary-clr);
-    }
-    .humburger{
-        display: block;
-    }
-    .container{
-        max-width: 95%;
-    }
-    .hero{
-        height: 60vh;
-    }
-    h3{
-    font-size: 1.3rem;
-    line-height: 1.3rem;
-    }
-    h1{
-        font-size: 2.2rem;
-        line-height: 4rem;
-    }
-    h4{
-        line-height: 2rem;
-        font-size: 1rem;
-    }
-    .category-container{
-    grid-template-columns: 1fr;
-    }
-    .category:nth-child(1),
-    .category:nth-child(2),
-    .category:nth-child(3),
-    .category:nth-child(4){
-        grid-row: auto;
-        max-width: 80vw;
-    }
-    .sale-container {
-        padding-inline: 20px;
-        text-align: center; /* Sab kuch center karne ke liye */
-        background-position: center;
-    }
-
-    .sale-container h3, 
-    .sale-container h1 {
-        padding-left: 0 !important; /* Fixed padding khatam */
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
         text-align: center;
-        line-height: 1.3;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
-    .sale-container h1 {
-        font-size: 1.8rem;
+    /* Jab hamburger click ho to menu dikhe */
+    .navlink.active {
+        display: flex;
     }
 
-    .sale-container .line {
-        width: 80px;
-        margin: 15px auto !important; /* Line ko center karega */
+    .navlink li {
+        margin: 15px 0;
     }
 
-    /* "Big Sale" text ko center karne ke liye */
-    .sale-container h4 {
-        text-align: center !important;
-        margin-left: 0 !important;
-        padding: 0 !important;
+    /* Hamburger icon ko sahi se dikhana */
+    #menu-icon {
+        display: block !important;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
     }
 
-    /* Button ko center karne ke liye */
-    .sale-container .btn, 
-    .sale-container button {
-        display: block;
-        margin: 20px auto !important;
+    /* Icons ki spacing */
+    .nav-icon {
+        gap: 15px;
+    }
+
+    /* Product Cards ko mobile par 1 column mein karna */
+    .card-skincare-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .skincare-card {
+        width: 90% !important; /* Mobile par card bada dikhega */
+        margin: 0 auto;
+    }
+
+    .skincare-card img {
+        height: auto; /* Image responsive rahegi */
+        width: 100%;
+    }
+
+    /* Hero Section / Banner fix */
+    .hero-section {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
     }
 }
 
-
+/* Desktop par Hamburger chhupane ke liye */
+@media (min-width: 769px) {
+    #menu-icon {
+        display: none;
+    }
+}
