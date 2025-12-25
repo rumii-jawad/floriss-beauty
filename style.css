@@ -511,6 +511,7 @@ form h3{
 }
 .email-button{
     border-radius: 0;
+    justify-content: center;
 }
 .social-icons{
     gap: 1.2rem;
@@ -645,11 +646,15 @@ form h3{
     grid-template-columns: 1fr;
     }
     .category:nth-child(1),
-    .category:nth-child(2),
-    .category:nth-child(3),
     .category:nth-child(4){
         grid-row: auto;
-        max-width: 80vw;
+        max-width: 90vw;
+        height: 100vh;
+    }
+    .category:nth-child(2),
+    .category:nth-child(3){
+        grid-row: auto;
+        max-width: 70vw;
     }
     .sale-container {
         padding-inline: 20px;
@@ -697,6 +702,7 @@ form h3{
         width: 30% !important;
         margin: 0 auto;
         border-radius: 5px !important; /* Mobile par rounded corners ache lagte hain */
+        justify-content: center;
     }
     .social-icons{
         justify-content: center !important;
