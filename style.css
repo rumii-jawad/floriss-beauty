@@ -645,14 +645,11 @@ form h3{
     grid-template-columns: 1fr;
     }
     .category:nth-child(1),
+    .category:nth-child(2),
+    .category:nth-child(3),
     .category:nth-child(4){
         grid-row: auto;
-        max-width: 50vw;
-    }
-      .category:nth-child(2),
-    .category:nth-child(3){
-         grid-row: auto;
-        max-width: 90vw;
+        max-width: 80vw;
     }
     .sale-container {
         padding-inline: 20px;
@@ -689,39 +686,22 @@ form h3{
         display: block;
         margin: 20px auto !important;
     }
-    .container{
-        flex-direction: column !important; /* Items ko upar niche karne ke liye */
-        align-items: center !important;
-        text-align: center;
-        padding: 70px 70px !important;
-    }
-
-    /* 2. Input Container (Email + Button) */
-    .input-container{
-        flex-direction: column !important; /* Email aur Button ko alag line mein lane ke liye */
-        width: 100% !important;
-        gap: 10px; /* Dono ke darmiyan fasla */
-    }
-
-    /* 3. Input field ko chota aur fit karne ke liye */
     .input-container input {
-        width: 70% !important; /* Screen ke mutabik width */
+        width: 80% !important; /* Screen ke mutabik width */
         margin: 0 auto;
         padding: 12px !important;
     }
 
     /* 4. Subscribe Button Fix */
     .email-button {
-        width: 90% !important;
+        width: 30% !important;
         margin: 0 auto;
         border-radius: 5px !important; /* Mobile par rounded corners ache lagte hain */
     }
-
-    /* 5. Social Icons Fix */
-    .social-icons {
+    .social-icons{
         justify-content: center !important;
         margin-top: 20px !important;
-        gap: 15px;
+        gap: 40px;
     }
 }
 
