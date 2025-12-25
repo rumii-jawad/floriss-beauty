@@ -649,7 +649,7 @@ form h3{
     .category:nth-child(4){
         grid-row: auto;
         max-width: 90vw;
-        height: 100vh;
+        height: 80vh;
     }
     .category:nth-child(2),
     .category:nth-child(3){
@@ -699,10 +699,10 @@ form h3{
 
     /* 4. Subscribe Button Fix */
     .email-button {
-        width: 30% !important;
+        width: 40% !important;
         margin: 0 auto;
         border-radius: 5px !important; /* Mobile par rounded corners ache lagte hain */
-        justify-content: center;
+        
     }
     .social-icons{
         justify-content: center !important;
